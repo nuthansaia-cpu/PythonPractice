@@ -3,4 +3,3 @@ factor=0
 while num>0:
     if num%factor==0:
         print(factor)
-    factor+=1
