@@ -3,7 +3,6 @@ factors=1
 count=0
 while factors<=num:
     if num%factors==0:
-        print(factors)
         count+=1
     factors+=1
 if count<=2:
