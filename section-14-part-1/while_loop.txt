@@ -1,0 +1,74 @@
+# While loop.
+
+n=5
+while n>0:
+    print(n)
+    n=n-1
+
+print("----------------------------------------------------------")
+
+# Tables.
+n=3
+i=0
+while i<10:
+      i=i+1
+      print(n,'x',i,'=',n*i)
+
+
+print("----------------------------------------------------------")
+
+# Getting and Discarding the last digit.
+n=4365
+while n>0:
+      r=n%10
+      print(r)
+      n=n//10
+
+print("----------------------------------------------------------")
+
+# Count Digits Of a Number.
+n=2456
+count=0
+while n>0:
+      n=n//10
+      count+=1
+print('No of Digits in the Number: ',count)
+
+print("----------------------------------------------------------")
+
+# Sum of Digits of a Number.
+n=1346
+sum=0
+while n>0:
+      r=n%10
+      sum= sum + r
+      n=n//10
+print('Sum of Digits: ',sum)
+
+print("----------------------------------------------------------")
+
+# Reverse a Number
+
+n=1257
+rev=0
+while n>0 :
+      r=n%10
+      rev=rev * 10 + r 
+      n=n//10
+print('Reverse Number:',rev)
+
+print("----------------------------------------------------------")
+
+# Check a No is a Palindrome
+
+n=1221
+rev=0
+m=n
+while n>0 :
+      r=n%10
+      rev=rev * 10 + r 
+      n=n//10
+if rev==m:
+     print(m,'is a palindrome number')
+else:
+     print(m,'is not a palindrome number ')
