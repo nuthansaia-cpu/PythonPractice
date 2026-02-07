@@ -72,3 +72,7 @@ if rev==m:
      print(m,'is a palindrome number')
 else:
      print(m,'is not a palindrome number ')
+print("----------------------------------------------------------")
+
+
+ 
