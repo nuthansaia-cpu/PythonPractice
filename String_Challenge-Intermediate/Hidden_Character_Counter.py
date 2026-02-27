@@ -1,0 +1,5 @@
+s1=input('Enter the name:')
+s2=s1.isupper()
+s3=s1.islower()
+print(s2)
+print(s3)
