@@ -1,0 +1,10 @@
+n=int(input('Enter a Number:'))
+x=n%4
+if x==0:
+	print(n ,'Is a leap year')
+elif x==1:
+	print(n-1,'Is the nearest leap year for', n)
+elif x==2:
+	print(n-2,'Is the nearest leap year for', n)
+else:
+	print(n+1,'Is the nearest leap year for', n)
