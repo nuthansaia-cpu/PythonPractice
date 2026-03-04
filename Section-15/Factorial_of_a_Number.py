@@ -1,5 +1,15 @@
-n=int(input('Enter a Number:'))
-fac=1
-for i in range(1,n+1):
-	fac=fac*i
-print('Factorial of a Numbers',fac)
+"""Calculate factorial of a number.
+
+n! = 1 * 2 * 3 * ... * n, for n >= 0
+"""
+
+n = int(input("Enter a number: "))
+
+if n < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+
+    print("Factorial:", factorial)

@@ -1,19 +1,18 @@
-item1='Hot Dog'
-price1='30'
-dash=20-len(item1)-len(price1)
-print(item1,'-'*dash,'$',price1)
+"""Print a simple restaurant menu with aligned prices."""
 
-item1='Dount'
-price1='40'
-dash=20-len(item1)-len(price1)
-print(item1,'-'*dash,'$',price1)
+# Store menu items as (name, price) tuples for cleaner iteration.
+menu_items = [
+    ("Hot Dog", 30),
+    ("Donut", 40),
+    ("Burger", 35),
+    ("Pizza", 65),
+]
 
-item1='Burger'
-price1='35'
-dash=20-len(item1)-len(price1)
-print(item1,'-'*dash,'$',price1)
+line_width = 24
 
-item1='Pizza'
-price1='65'
-dash=20-len(item1)-len(price1)
-print(item1,'-'*dash,'$',price1)
+for name, price in menu_items:
+    # Build `name .... $price` style output with dot padding.
+    left = f"{name}"
+    right = f"${price}"
+    dots_needed = max(1, line_width - len(left) - len(right))
+    print(left + "." * dots_needed + right)

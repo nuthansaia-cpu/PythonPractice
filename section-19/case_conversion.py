@@ -1,43 +1,19 @@
-# capitalize()
-s1 = 'hello dear'
-s2 = s1.capitalize()
-print(s2)   
+"""Demonstrate common string case-conversion methods."""
 
-s1 = 'hello Dear'
-s2 = s1.capitalize()
-print(s2)  
+sample = "hello dear"
+print(sample.capitalize())  # First character uppercase.
+print("-" * 50)
 
-print('----------------------------------------------------------')
+print(sample.upper())       # All letters uppercase.
+print("-" * 50)
 
-# upper()
-s1 = 'hello dear'
-s2 = s1.upper()
-print(s2)  
+print("HELLO DEAR".lower()) # All letters lowercase.
+print("-" * 50)
 
-print('----------------------------------------------------------')
+print("hello how are you".title())   # First letter of each word uppercase.
+print("-" * 50)
 
-# lower()
-s1 = 'HELLO DEAR'
-s2 = s1.lower()
-print(s2)  
+print("Hello How Are You".swapcase()) # Upper <-> lower swap.
+print("-" * 50)
 
-print('----------------------------------------------------------')
-
-# title()
-s1 = 'hello how are you'
-s2 = s1.title()
-print(s2)   
-
-print('----------------------------------------------------------')
-
-# swapcase()
-s1 = 'Hello How Are You'
-s2 = s1.swapcase()
-print(s2)   
-
-print('----------------------------------------------------------')
-
-# casefold()
-s1 = 'HELLO how are you'
-s2 = s1.casefold()
-print(s2)  
+print("HELLO how are you".casefold()) # Stronger lowercase for comparisons.

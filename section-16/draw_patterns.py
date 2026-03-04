@@ -1,44 +1,31 @@
-for i in range (1,6):
-	for j in range(1,6):
-		print('*',end='')
-	print('')
+"""Draw common star patterns using nested loops."""
 
-print('-----------------------------------------------------------------')
+rows = 5
 
-for i in range(1,6):
-	for j in range(1,6):
-		if i>=j:
-			print('*',end='')
-	print('')
+# 1) Solid square (5x5)
+for _ in range(rows):
+    print("*" * rows)
 
-print('-----------------------------------------------------------------')
+print("-" * 65)
 
-for i in range(1,6):
-	for j in range(1,i+1):
-		print('*',end='')
-	print('')
+# 2) Right triangle (increasing)
+for i in range(1, rows + 1):
+    print("*" * i)
 
-print('-----------------------------------------------------------------')
+print("-" * 65)
 
-for i in range(1,6):
-	print('*' * i)
+# 3) Inverted right triangle (decreasing)
+for i in range(rows, 0, -1):
+    print("*" * i)
 
-print('-----------------------------------------------------------------')
+print("-" * 65)
 
-for i in range (1,6):
-	for j in range(1,6-(i-1)):
-		print('*',end='')
-	print('')
-
-print('-----------------------------------------------------------------')
-
-for i in range(1,6):
-	print('*'*(6-i))
-
-print('-----------------------------------------------------------------')
-
-for i in range(1,6):
-	print('*'*(i-1))
-	print('*'*(5-(i-1)))
-
-print('-----------------------------------------------------------------')
+# 4) Hollow square pattern.
+for i in range(rows):
+    for j in range(rows):
+        # Border positions become '*', inner cells become space.
+        if i in (0, rows - 1) or j in (0, rows - 1):
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()

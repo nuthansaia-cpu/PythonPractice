@@ -1,6 +1,16 @@
-s1=input('Enter a word:')
-s2='aieou'
-if s1[0] in s2 and s1[-1].isdigit():
-	print('valid')
+"""Validate word using prefix/suffix rules.
+
+Rule used here:
+- first character must be a vowel,
+- last character must be a digit.
+"""
+
+word = input("Enter a word: ").strip()
+vowels = "aeiouAEIOU"
+
+if not word:
+    print("Invalid: empty input")
+elif word[0] in vowels and word[-1].isdigit():
+    print("Valid")
 else:
-	print('invalid')
+    print("Invalid")

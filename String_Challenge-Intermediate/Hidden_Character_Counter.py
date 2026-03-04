@@ -1,5 +1,18 @@
-s1=input('Enter the name:')
-s2=s1.isupper()
-s3=s1.islower()
-print(s2)
-print(s3)
+"""Count uppercase and lowercase letters in input text.
+
+This improves on the earlier version which only returned all-upper/all-lower checks.
+"""
+
+text = input("Enter text: ")
+
+upper_count = 0
+lower_count = 0
+
+for ch in text:
+    if ch.isupper():
+        upper_count += 1
+    elif ch.islower():
+        lower_count += 1
+
+print("Uppercase letters:", upper_count)
+print("Lowercase letters:", lower_count)

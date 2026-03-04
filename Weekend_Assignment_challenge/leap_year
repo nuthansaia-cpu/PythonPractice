@@ -1,10 +1,30 @@
-n=int(input('Enter a Number:'))
-x=n%4
-if x==0:
-	print(n ,'Is a leap year')
-elif x==1:
-	print(n-1,'Is the nearest leap year for', n)
-elif x==2:
-	print(n-2,'Is the nearest leap year for', n)
+"""Check leap year or print nearest leap year.
+
+Note: this file has no .py extension but still contains valid Python code.
+"""
+
+year = int(input("Enter a year: "))
+
+# Leap year check using complete Gregorian rule.
+is_leap = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+if is_leap:
+    print(year, "is a leap year")
 else:
-	print(n+1,'Is the nearest leap year for', n)
+    # Search nearest leap year by increasing distance from input year.
+    offset = 1
+    while True:
+        prev_year = year - offset
+        next_year = year + offset
+
+        prev_is_leap = (prev_year % 4 == 0 and prev_year % 100 != 0) or (prev_year % 400 == 0)
+        next_is_leap = (next_year % 4 == 0 and next_year % 100 != 0) or (next_year % 400 == 0)
+
+        if prev_is_leap:
+            print(prev_year, "is the nearest leap year for", year)
+            break
+        if next_is_leap:
+            print(next_year, "is the nearest leap year for", year)
+            break
+
+        offset += 1

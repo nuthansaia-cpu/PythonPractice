@@ -1,11 +1,12 @@
-# range(Start,Stop,Step)
+"""Simple `for` loop examples in Python."""
 
+# range(stop): starts at 0 and stops before stop.
 for i in range(5):
-	print(i)   
+    print(i)
 
-print('------------------------------------------------')
-# String
-s1='python'
-for x in s1:
-	print(x)
+print("-" * 40)
 
+# Loop through each character in a string.
+text = "python"
+for char in text:
+    print(char)

@@ -1,42 +1,32 @@
-# isdigit()
-s = '7\u20823\u2075'  
-print(s)         
-print(s.isdigit())    
+"""Demonstrate isdigit, isdecimal, isnumeric, isascii, isalnum."""
 
-s2 = '7235'
-print(s2.isdigit()) 
+# isdigit: True for digit characters (includes some Unicode digits).
+s = "7\u20823\u2075"
+print(s)
+print(s.isdigit())
+print("7235".isdigit())
+print("71.23".isdigit())
 
-s2 = '71.23'
-print(s2.isdigit())   
+print("-" * 50)
 
-print('----------------------------------------------------------')
+# isdecimal: stricter than isdigit.
+s_decimal = "\u0969\u096A\u096B"
+print(s_decimal)
+print(s_decimal.isdecimal())
 
-# isdecimal()
-s3 = '\u0969\u096A\u096B'   
-print(s3)                   
-print(s3.isdecimal())       
+print("-" * 50)
 
-print('----------------------------------------------------------')
+# isnumeric: broader; includes numeric symbols like fractions.
+s_numeric = "\u00BE\u215E"
+print(s_numeric)
+print(s_numeric.isnumeric())
 
-# isnumeric()
-s4 = '\u00BE\u215E' 
-print(s4) 
-print(s4.isnumeric()) 
+print("-" * 50)
 
-print('----------------------------------------------------------')
+print("Hello123".isascii())
+print("नमस्ते123".isascii())
 
-# isascii()
-s5 = 'Hello123'
-print(s5.isascii())  
+print("-" * 50)
 
-s6 = 'नमस्ते123'  
-print(s6.isascii())   
-
-print('----------------------------------------------------------')
-
-# isalnum()
-s7 = 'abc123'
-print(s7.isalnum()) 
-
-s8 = 'abc123!'
-print(s8.isalnum())    
+print("abc123".isalnum())
+print("abc123!".isalnum())

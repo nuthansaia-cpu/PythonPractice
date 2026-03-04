@@ -1,51 +1,29 @@
-# startswith(prefix,start,end)
-s1 = 'python is very easy'
-print(s1.startswith('python'))  
- 
-print(s1.startswith('is'))       
+"""Demonstrate startswith, endswith, remove prefix/suffix, partition."""
 
-print(s1.startswith('is', 7))    
+sentence = "python is very easy"
+print(sentence.startswith("python"))
+print(sentence.startswith("is"))
+print(sentence.startswith("is", 7))
+print(sentence.endswith("easy"))
 
-print(s1.endswith('easy'))       
+print("-" * 50)
 
-print('----------------------------------------------------------')
+email = "abc@gmail.com"
+print(email.endswith("gmail.com"))
+print(email.endswith(".com"))
+print(email.endswith("yahoo.com"))
 
-# endswith(suffix,start,end)
-s1 = 'abc@gmail.com'
+print("-" * 50)
 
-print(s1.endswith('gmail.com'))  
+text = "python programming"
+print(text.removeprefix("py"))
+print(text.removeprefix("java"))
 
-print(s1.endswith('.com'))       
+print("-" * 50)
 
-print(s1.endswith('yahoo.com'))  
+print(text.removesuffix("ing"))
 
-print('----------------------------------------------------------')
+print("-" * 50)
 
-# removeprefix(prefix)
-s1 = 'python programming'
-s2 = s1.removeprefix('py')
-print(s2)  
-
-s3 = s1.removeprefix('java')
-print(s3)  
-
-print('----------------------------------------------------------')
-
-# removesuffix(suffix)
-s1 = 'python programming'
-s2 = s1.removesuffix('ing')
-print(s2)  
-
-print('----------------------------------------------------------')
-
-# partition(sep)
-s1 = 'python is easy'
-s2 = s1.partition('is')
-print(s2)  
-
-print('----------------------------------------------------------')
-
-# rpartition(sep)
-s1 = 'python is easy'
-s2 = s1.rpartition('s')
-print(s2) 
+print("python is easy".partition("is"))
+print("python is easy".rpartition("s"))

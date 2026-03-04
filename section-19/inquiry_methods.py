@@ -1,81 +1,36 @@
-# isalpha()
-s = 'Hello'
-x = s.isalpha()
-print(x)  
+"""Demonstrate inquiry methods that return True/False."""
 
-s = 'Hello123'
-x = s.isalpha()
-print(x)  
+print("Hello".isalpha())
+print("Hello123".isalpha())
+print("-" * 50)
 
-print('----------------------------------------------------------')
+print("hello".islower())
+print("Hello".islower())
+print("-" * 50)
 
-# islower()
-s = 'hello'
-x = s.islower()
-print(x)  
+print("HELLO".isupper())
+print("Hello".isupper())
+print("-" * 50)
 
-s = 'Hello'
-x = s.islower()
-print(x)  
+print("Hello World".istitle())
+print("Hello world".istitle())
+print("-" * 50)
 
-print('----------------------------------------------------------')
+spaces = "       "
+empty = ""
+newline_tab = "\n\t"
+mixed = " abc "
+print(spaces.isspace())
+print(empty.isspace())
+print(newline_tab.isspace())
+print(mixed.isspace())
+print("-" * 50)
 
-# isupper()
-s = 'HELLO'
-x = s.isupper()
-print(x)  
+print("Hello World".isprintable())
+print("Hello\nWorld".isprintable())
+print("-" * 50)
 
-s = 'Hello'
-x = s.isupper()
-print(x)  
-
-print('----------------------------------------------------------')
-
-# istitle()
-s = 'Hello World'
-x = s.istitle()
-print(x)  
-
-s = 'Hello world'
-print(s.istitle())  
-
-print('----------------------------------------------------------')
-
-# isspace()
-s1 = '       '   
-print(len(s1))        
-print(s1.isspace())   
-
-s2 = ''   
-print(len(s2))       
-print(s2.isspace())  
-
-s3 = '\n\t'   
-print(s3.isspace())   
-
-s4 = ' abc '  
-print(s4.isspace())  
-
-print('----------------------------------------------------------')
-
-# isprintable()
-s = 'Hello World'
-print(s.isprintable())  
-
-s = 'Hello\nWorld'
-print(s.isprintable())  
-
-print('----------------------------------------------------------')
-
-# isidentifier()
-s = 'item1'
-print(s.isidentifier())  
-
-s = '1item'
-print(s.isidentifier())  
-
-s = 'item_1'
-print(s.isidentifier())  
-
-s = 'item-1'
-print(s.isidentifier())  
+print("item1".isidentifier())
+print("1item".isidentifier())
+print("item_1".isidentifier())
+print("item-1".isidentifier())

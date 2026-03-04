@@ -1,28 +1,20 @@
-month = int(input("Enter month number: "))
+"""Convert month number (1-12) to month name."""
 
-if month == 0:
-        print("January")
-elif month == 1:
-    print("February")
-elif month == 2:
-    print("March")
-elif month == 3:
-    print("April")
-elif month == 4:
-    print("May")
-elif month == 5:
-    print("June")
-elif month == 6:
-    print("July")
-elif month == 7:
-    print("August")
-elif month == 8:
-    print("September")
-elif month == 9:
-    print("October")
-elif month == 10:
-    print("November")
-elif month == 11:
-    print("December")
-else:
-    print("Invalid month number")
+month = int(input("Enter month number (1-12): "))
+
+month_map = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December",
+}
+
+print(month_map.get(month, "Invalid month number"))

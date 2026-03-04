@@ -1,34 +1,30 @@
-'''# Break syntax.
-for i in range(0,n):
-	statement1
-	if <conditon>:
-		break
-	statement2
-statement3
+"""Examples of break, continue, pass, and loop else."""
 
-print('-----------------------------------------------')
+# break: stop the loop immediately when a condition matches.
+for value in range(1, 6):
+    if value == 4:
+        break
+    print("break example:", value)
 
-# countinue syntax.
-for i in range(0,n):
-	statement1
-	if <conditon>:
-		Continue
-	statement2
-statement3
+print("-" * 40)
 
-print('-----------------------------------------------')
+# continue: skip current iteration and move to the next.
+for value in range(1, 6):
+    if value == 3:
+        continue
+    print("continue example:", value)
 
-# pass syntax.
-for i in range(0,n):
-	pass
+print("-" * 40)
 
-print('-----------------------------------------------')
+# pass: placeholder statement when code block is intentionally empty.
+for _ in range(3):
+    pass
+print("pass example: loop executed with placeholder body")
 
-# else suite syntax.
-for i in range(0,n):
-	statement1
-	statement2
+print("-" * 40)
+
+# else with for-loop: runs only if loop does not break.
+for value in range(1, 4):
+    print("else-suite example:", value)
 else:
-	statement3
-
-statement4'''
+    print("Loop finished normally, so else block ran.")

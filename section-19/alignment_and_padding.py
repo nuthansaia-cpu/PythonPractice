@@ -1,59 +1,28 @@
-# Alignment and padding methods
-# ljust(width,fillchar)
-s = 'Hello'
-x = s. ljust (7, "*")
-print(x)
+"""Demonstrate alignment/padding and trimming string methods."""
 
-print('-------------------------------------------------------------')
+text = "Hello"
 
-# rjust(width,fillchar)
-x = s.rjust(7)
-print(x)
+# ljust(width, fillchar): pad on right side.
+print(text.ljust(7, "*"))
+print("-" * 60)
 
-x = s.rjust(7, '-')
-print(x)
+# rjust(width, fillchar): pad on left side.
+print(text.rjust(7))
+print(text.rjust(7, "-"))
+print("-" * 60)
 
-print('-------------------------------------------------------------')
+# center(width, fillchar): keep content centered.
+print(text.center(7))
+print(text.center(7, "*"))
+print("-" * 60)
 
-# center(width,fillchar)
-x = s.center(7)
-print(x) 
+# zfill(width): left pad with zeros (useful for numeric text).
+print(text.zfill(7))
+print("-" * 60)
 
-x = s. center (7, '*')
-print(x)
-
-print('-------------------------------------------------------------')
-
-# zfill(width,fillchar)
-x = s.zfill(7)
-print(x)
-
-print('-------------------------------------------------------------')
-
-# string method
-#lstrip(chars)
-s ='  Hello'
-x = s.lstrip()
-print(x)
-
-s = '$$Hello'
-x = s.lstrip('$')
-print(x)
-
-print('-------------------------------------------------------------')
-
-# rstrip(chars)
-s = 'Hello!!'
-x = s.rstrip('!')
-print(x)
-
-print('-------------------------------------------------------------')
-
-# strip(chars)
-s = '#Hello#'
-x = s.strip('#')
-print(x)
-
-s = '#!Hello  $ *'
-x =s.strip('#! $*' )
-print(x)
+# lstrip/rstrip/strip remove characters from edges (not middle).
+print("  Hello".lstrip())
+print("$$Hello".lstrip("$"))
+print("Hello!!".rstrip("!"))
+print("#Hello#".strip("#"))
+print("#!Hello  $ *".strip("#! $*"))

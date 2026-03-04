@@ -1,27 +1,24 @@
-n=int(input('Enter a number:'))
-x=int(input('Enter a number greater then the first entered number:'))
-m=int(input('multiple:'))
-rem=n%m
-add=m-rem
-z=add+n
-for i in range(z,x+1,m):
-	print(i)
-'''# using for loop
-for i in range(n,x+1,1):
-	if i%2==0:
-		print(i,end=' ')
-print(' ')
+"""Print multiples of a chosen value within a range.
 
-# using while loop
-while n<=x:
-	if n%2==0:
-		print(n,end=' ')
-	n+=1
-if n%m==0:
-	z=n
-elif n%m==1:
-    z=n+2
+This script asks for:
+1. start value
+2. end value (must be >= start)
+3. multiple value m
+Then it prints numbers divisible by m in that interval.
+"""
+
+start = int(input("Enter start number: "))
+end = int(input("Enter end number (>= start): "))
+multiple = int(input("Enter a multiple value: "))
+
+if end < start:
+    print("End must be greater than or equal to start.")
+elif multiple == 0:
+    print("Multiple cannot be 0.")
 else:
-    z=n+1
-for i in range(z,x+1,m):
-	print(i)'''
+    # Find the first number >= start that is divisible by multiple.
+    remainder = start % multiple
+    first = start if remainder == 0 else start + (multiple - remainder)
+
+    for value in range(first, end + 1, multiple):
+        print(value)

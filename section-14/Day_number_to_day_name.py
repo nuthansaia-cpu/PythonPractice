@@ -1,17 +1,16 @@
-day_no=int(input("Enter the day number:"))
-if day_no==0:
-    print("Sunday")
-elif day_no==1:
-    print("Monday")
-elif day_no==2:
-    print("Tuesday")
-elif day_no==3:
-    print("Wednesday")
-elif day_no==4:
-    print("Thursday")
-elif day_no==5:
-    print("Friday")
-elif day_no==6:
-    print("Saturday")
-else:
-    print("Invalid Day Number")
+"""Convert day number (1-7) to day name."""
+
+day_no = int(input("Enter the day number (1-7): "))
+
+day_map = {
+    1: "Sunday",
+    2: "Monday",
+    3: "Tuesday",
+    4: "Wednesday",
+    5: "Thursday",
+    6: "Friday",
+    7: "Saturday",
+}
+
+# dict.get(key, default) returns default when key is not present.
+print(day_map.get(day_no, "Invalid day number"))

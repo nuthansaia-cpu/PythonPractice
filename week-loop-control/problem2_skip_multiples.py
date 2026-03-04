@@ -1,8 +1,12 @@
-n=int(input('Enter a number:'))
-x=0
-while n>x:
-	x=x+1
-	if x%3==0:
-		continue
-	else:
-		print(x)
+"""Print numbers from 1 to n, skipping multiples of 3."""
+
+n = int(input("Enter a number: "))
+
+current = 1
+while current <= n:
+    if current % 3 == 0:
+        current += 1
+        continue
+
+    print(current)
+    current += 1

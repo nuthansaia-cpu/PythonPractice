@@ -1,74 +1,40 @@
-# find(sub,start,end)
-s='hello how are you'
-x=s.find('o')
-print(x)
+"""Compare find/rfind/index/rindex/count behavior."""
 
-s='hello how are you'
-x=s.find('how')
-print(x)
+text = "hello how are you"
 
-s='hello how are you'
-x=s.find('K')
-print(x)
+# find() returns -1 if substring is missing.
+print(text.find("o"))
+print(text.find("how"))
+print(text.find("K"))
+print(text.find("o", 5))
+print(text.find("o", 5, 7))
 
-s='hello how are you'
-x=s.find('o',5)
-print(x)
+print("-" * 64)
 
-s='hello how areyou'
-x=s.find('o',5,7)
-print(x)
+# rfind() searches from right side and returns -1 if not found.
+print(text.rfind("o"))
+print(text.rfind("o", 0, 15))
+print(text.rfind("kite"))
 
-print('----------------------------------------------------------------')
+print("-" * 64)
 
-# rfind(sub,start,end)
-s='hello how are you'
-x=s.rfind('o')
-print(x)
+# rindex() is like rfind(), but raises ValueError when missing.
+print(text.rindex("o"))
+print(text.rindex("o", 0, 15))
 
-s='hello how are you'
-x=s.rfind('o',0,15)
-print(x)
+print("-" * 64)
 
-s='hello how are you'
-x=s.rfind('kite')
-print(x)
+# count() returns how many times a substring appears.
+print(text.count("o"))
+print(text.count("me"))
 
-print('----------------------------------------------------------------')
+print("-" * 64)
 
-# rindex(sub,start,end)
-s='hello how are you'
-x=s.rindex('o')
-print(x)
+# index() is like find(), but raises ValueError when missing.
+print(text.index("o"))
+print(text.index("how"))
 
-s='hello how are you'
-x=s.rindex('o',0,15)
-print(x)
-
-print('----------------------------------------------------------------')
-
-# count(sub,start,end)
-s='hello how are you'
-x=s.count('o')
-print(x)
-
-s='hello how are you'
-x=s.count('me')
-print(x)
-
-print('----------------------------------------------------------------')
-
-# index(sub,start,end)
-s='hello how are you'
-x=s.index('o')
-print(x)
-
-s='hello how are you'
-x=s.index('how')
-print(x)
-
-s='hello how are you'
-x=s.index('k')
-print(x)
-
-
+try:
+    print(text.index("k"))
+except ValueError:
+    print("'k' not found -> index() raises ValueError")

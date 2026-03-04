@@ -1,67 +1,40 @@
-# replace(old,new,count)
-s1 = "a-b-c-d-e"
-s2 = s1.replace("-", ",")
-print(s2)
+"""Demonstrate replace, join, split, rsplit, and splitlines."""
 
-s2 = s1.replace("-", ",", 3)
-print(s2)
+# replace(old, new, count)
+email = "abc@gmail.com"
+print("a-b-c-d-e".replace("-", ","))
+print("a-b-c-d-e".replace("-", ",", 3))
+print("a-b-c-d-e".replace("m", "m"))  # No change; 'm' is not present.
+print(email.replace("gmail", "yahoo"))
 
-s2 = s1.replace("m", "m")
-print(s2) 
+print("-" * 50)
 
-s1 = "abc@gmail.com"
-s2 = s1.replace("gmail", "yahoo")
-print(s2)
+# join(iterable): separator joins items from an iterable of strings.
+print("xyz".join("abc"))
+print("/".join("abc"))
 
-print('----------------------------------------------------------')
+print("-" * 50)
 
-# join(iterable)
-s1 = "xyz"
-s2 = "abc"
-s3 = s1.join(s2)
-print(s3) 
+# split(sep, maxsplit)
+full_name = "John Smith Ajay"
+print(full_name.split())
+print(full_name.split("h"))
 
-s1 = "/"
-s2 = 'abc'
-s3 = s1.join(s2)
-print(s3) 
+csv_name = "John,Smith,Ajay"
+print(csv_name.split(","))
 
-print('----------------------------------------------------------')
+hyphen_data = "John-Smith-Ajay-Khan-James"
+print(hyphen_data.split())        # No spaces, so full string as one item.
+print(hyphen_data.split("-"))
+print(hyphen_data.split("-", 3))
 
-# split(sep,maxsplit)
-s1 = "John Smith Ajay"
-s2 = s1.split()
-print(s2)
+print("-" * 50)
 
-s2 = s1.split("h")
-print(s2) 
+# rsplit starts splitting from right side.
+print(hyphen_data.rsplit("-", 4))
 
-s1 = "John,Smith,Ajay"
-s2 = s1.split(",")
-print(s1) 
+print("-" * 50)
 
-s1 = "John-Smith-Ajay-Khan-James"
-s2 = s1.split()
-print(s2) 
-
-s1 = "John-Smith-Ajay-Khan-James"
-s2 = s1.split("-")
-print(s2) 
-
-s1 = "John-Smith-Ajay-Khan-James"
-s2 = s1.split("-", 3)
-print(s2) 
-
-print('----------------------------------------------------------')
-
-# rsplit(sep,maxsplit)
-s1 = "John-Smith-Ajay-Khan-James"
-s2 = s1.rsplit("-", 4)
-print(s2)
-
-print('----------------------------------------------------------')
-
-# splitlines(keepends)
-s1 = "Line 1\nLine 2\nLine 3"
-s2 = s1.splitlines()
-print(s2)
+# splitlines splits text at line boundaries.
+multiline = "Line 1\nLine 2\nLine 3"
+print(multiline.splitlines())

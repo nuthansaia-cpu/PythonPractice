@@ -1,21 +1,28 @@
-n=int(input('Enter a Number:'))
-x=0
-y=0
-for i in range(n,n+10):
-	if i%4==0 and i%100!=0:
-		break
-	else:
-		if i%400==0 and i%100==0:
-			break
-	x+=1
-for z in range(n,n-10,-1):
-	if z%4==0 and z%100!=0:
-		break
-	else:
-		if z%400==0 and z%100==0:
-			break
-	y+=1
-if x<y:
-	print(i,'it is the nearest prime number')
-else:
-	print(z,'it is the nearest prime number')
+"""Find the nearest leap year to the given year.
+
+If two leap years are equally near, this script returns the earlier year.
+"""
+
+
+def is_leap(year: int) -> bool:
+    """Return True if year is leap, else False."""
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+
+year = int(input("Enter a year: "))
+
+# Search outward from the target year.
+distance = 0
+while True:
+    lower = year - distance
+    upper = year + distance
+
+    if is_leap(lower):
+        print(f"Nearest leap year: {lower}")
+        break
+
+    if is_leap(upper):
+        print(f"Nearest leap year: {upper}")
+        break
+
+    distance += 1
