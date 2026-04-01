@@ -8,7 +8,7 @@ for i in range(len(lst)):
 		if lst[i]==lst[x]:
 			count=count+1
 			print(count)
-		continue
+		
 	if count>count1:
 		count1=count
 		mode=lst[i]

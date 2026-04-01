@@ -3,30 +3,30 @@ if 97<=ord(l1)<=122:
 	l2='aieou'
 else:
 	l2='AIEOU'
-l3=l1
-l4=l1
+letter=l1
+letter1=l1
 n=1
 count=0
 countt=0
 while n>0:
-	if l3 in l2:
+	if letter in l2:
 		break
 	else:
-		l3=chr(ord(l3) + 1)
+		letter=chr(ord(letter) + 1)
 		count+=1
-		if ord(l3)==123:
-			l3='u'
-		elif ord(l3)==91:
-			l3='U'
+		if ord(letter)==123:
+			letter='u'
+		elif ord(letter)==91:
+			letter='U'
 		continue
 while n>0:
-	if l4 in l2:
+	if letter1 in l2:
 		break
 	else:
-		l4=chr(ord(l4) - 1)
+		letter1=chr(ord(letter1) - 1)
 		countt+=1
 		continue
 if countt<=count:
-	print(l1,'nearest value',l4)
+	print(l1,'nearest value',letter1)
 else:
-	print(l1,'nearest value',l3)
+	print(l1,'nearest value',letter)
