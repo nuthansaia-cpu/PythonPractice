@@ -1,3 +1,0 @@
-s=input('Enter a name')
-if 'a,i,e,o,v,u' in s:
-	print(present)
